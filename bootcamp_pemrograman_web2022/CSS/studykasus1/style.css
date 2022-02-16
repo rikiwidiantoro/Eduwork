@@ -1,0 +1,38 @@
+body {
+    font-family: sans-serif;
+}
+
+table {
+    margin: 110px auto;
+}
+
+table h1 {
+    font-size: 45px;
+}
+table p {
+    text-align: justify;
+}
+table img {
+    padding: 50px;
+    margin-top: 70px;
+}
+
+.line {
+    width: 160px;
+    height: 3px;
+    background-color: rgb(97, 109, 72);
+    margin-top: -20px;
+}
+
+button {
+    background-color: rgb(97, 109, 72);
+    border: 0px solid rgb(97, 109, 72);
+    color: whitesmoke;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: rgb(124, 131, 108);
+    color: rgb(223, 222, 222);
+    transition: 1s;
+}
