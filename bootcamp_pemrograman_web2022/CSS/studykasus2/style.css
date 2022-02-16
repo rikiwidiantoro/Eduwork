@@ -1,0 +1,22 @@
+body {
+    font-family: sans-serif;
+}
+
+.home {
+    text-decoration: none;
+}
+
+.line {
+    width: 200px;
+    height: 3px;
+    background-color: gray;
+}
+
+.footer {
+    text-align: center;
+    color: whitesmoke;
+}
+
+p {
+    text-align: justify;
+}
