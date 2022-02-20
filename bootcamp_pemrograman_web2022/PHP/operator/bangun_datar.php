@@ -18,7 +18,7 @@
         <!-- persegi -->
         <li>
             <h4>Persegi</h4>
-            <p>rumus : sisi x sisi</p>
+            <p>rumus Luas : sisi x sisi</p>
             <p>soal : Sebuah persegi memiliki ukuran sisi 5 cm. Hitunglah berapa luas persegi tersebut!</p>
             <p>
                 <?php 
@@ -32,7 +32,7 @@
         <!-- persegi panjang -->
         <li>
             <h4>Persegi Panjang</h4>
-            <p>rumus : panjang x lebar</p>
+            <p>rumus Luas : panjang x lebar</p>
             <p>soal : Sebuah persegi panjang memiliki ukuran panjang 10 cm dan lebar 5 cm. Hitunglah berapa luas persegi panjang tersebut!</p>
             <p>
                 <?php 
@@ -47,7 +47,7 @@
         <!-- segitiga -->
         <li>
             <h4>Segitiga</h4>
-            <p>rumus : 1/2 x alas x tinggi</p>
+            <p>rumus Luas : 1/2 x alas x tinggi</p>
             <p>soal : Sebuah segitiga memiliki ukuran sisi alas 10 cm dan tinggi 7 cm. Jika ukuran sisi-sisi miringnya adalah 8 cm dan 9 cm, hitunglah berapa luas segitiga tersebut!</p>
             <p>
                 <?php 
@@ -62,7 +62,7 @@
         <!-- lingkaran -->
         <li>
             <h4>Lingkaran</h4>
-            <p>rumus : phi x r pangkat 2</p>
+            <p>rumus Luas : phi x r pangkat 2</p>
             <p>soal : Sebuah lingkaran memiliki ukuran jari-jari 7 cm. Hitunglah berapa luas lingkaran tersebut!</p>
             <p>
                 <?php 
@@ -77,7 +77,7 @@
         <!-- layang-layang -->
         <li>
             <h4>Layang-layang</h4>
-            <p>rumus : 1/2 x diagonal 1 x diagonal 2</p>
+            <p>rumus Luas : 1/2 x diagonal 1 x diagonal 2</p>
             <p>soal : Sebuah layang-layang memiliki ukuran diagonal1 10 cm dan diagonal2 20 cm. Hitunglah berapa luas layang-layang tersebut!</p>
             <p>
                 <?php 
