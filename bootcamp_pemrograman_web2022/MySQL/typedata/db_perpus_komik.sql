@@ -2,8 +2,8 @@
 -- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Feb 17, 2022 at 07:41 AM
+-- Host: localhost:3306
+-- Generation Time: Feb 19, 2022 at 04:36 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 8.0.13
 
@@ -86,6 +86,13 @@ CREATE TABLE `member` (
   `id_komik` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Dumping data for table `member`
+--
+
+INSERT INTO `member` (`id`, `nama`, `tgl_lahir`, `id_komik`) VALUES
+(1, 'Riki Widiantoro', '15 November 1998', 6);
+
 -- --------------------------------------------------------
 
 --
@@ -98,6 +105,14 @@ CREATE TABLE `pinjam` (
   `nama_peminjam` varchar(128) NOT NULL,
   `id_komik` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `pinjam`
+--
+
+INSERT INTO `pinjam` (`id`, `judul`, `nama_peminjam`, `id_komik`) VALUES
+(1, 'Jujutsu Kaisen season 1', 'Riki Widiantoro', 6),
+(2, 'Toros', '32 Desember 2020', 4);
 
 -- --------------------------------------------------------
 
@@ -174,7 +189,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `hilang`
 --
 ALTER TABLE `hilang`
-  MODIFY `id_hilang` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_hilang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `komik`
@@ -186,13 +201,13 @@ ALTER TABLE `komik`
 -- AUTO_INCREMENT for table `member`
 --
 ALTER TABLE `member`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `pinjam`
 --
 ALTER TABLE `pinjam`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tambah`
