@@ -10,10 +10,15 @@
         body {
             text-align: center;
         }
+        .note {
+            font-size: 12px;
+            color: red;
+        }
     </style>
 </head>
 <body>
     <h1>menghitung kategori nilai</h1>
+    <p class="note">note: jika muncul error abaikan!, lanjutkan mengisi form lalu klik cek!</p>
 
     <!-- form input -->
     <form action="" method="GET">
