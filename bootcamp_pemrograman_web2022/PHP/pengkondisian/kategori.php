@@ -41,12 +41,17 @@
     <br><hr><br>
 
     <?php
+
+        // inputan
         $nama = $_GET['nama'];
         $bb = $_GET['beratbadan']; //satuan kilogram contoh: 70kg
         $tb = $_GET['tinggibadan']; // satuan meter contoh: 1.7m harus dengan titik '.'
 
+        // rumus BMI
         $bmi = $bb / $tb ** 2;
 
+
+        // penkondisian kategori
         if ( $bmi < 18.5 ) {
             $kategori = "Kurus";
         } else if ( $bmi > 18.5 && $bmi < 24.9) {
