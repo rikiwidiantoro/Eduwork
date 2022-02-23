@@ -49,6 +49,7 @@
         <tr class="head">
             <td>No.</td>
             <td>Nama</td>
+            <td>Tanggal Lahir</td>
             <td>Umur</td>
             <td>Alamat</td>
             <td>Kelas</td>
@@ -67,7 +68,7 @@
                     // akhir umur
 
 
-                    // kategori penilaian
+                    // pengkondisian kategori penilaian
                     $nilaii = $uwu['nilai'];
     
                     if( $nilaii >= 90 && $nilaii <= 100 ) {
@@ -76,41 +77,58 @@
                         $kategori = "B";
                     } else if( $nilaii >= 70 && $nilaii <= 79 ) {
                         $kategori = "C";
-                    } else if( $nilaii >= 60 && $nilaii <= 69 ) {
+                    } else if( $nilaii >= 0 && $nilaii <= 69 ) {
                         $kategori = "D";
-                    } else if( $nilaii >= 0 && $nilaii <= 59 ) {
-                        $kategori = "E";
                     } else {
                         $kategori = "tidak ada nilai!";
                     }
-                
-                    switch( $kategori ) {
-                        case "A":
-                            "A";
-                            break;
-                        case "B":
-                            "B";
-                            break;
-                        case "C":
-                            "C";
-                            break;
-                        case "D":
-                            "D";
-                            break;
-                        case "E":
-                            "E";
-                            break;
-                        default:
-                            "tidak ada nilai!";
-                            break;
-                    }
                     // akhir kategori penilaian
+
+
+                    // format tanggal-bulan-tahun lahir
+
+                    // substr(string $string, int $offset, ?int $length = null)
+                    $tanggal = substr($uwu['tanggal_lahir'], 8, 2);
+                    $bulan = substr($uwu['tanggal_lahir'], 5, 2);
+                    $tahun = substr($uwu['tanggal_lahir'], 0, 4);
+
+                    // pengkondisian konversi angka ke huruf bulan
+                    if( $bulan == 01 ) {
+                        $bulan = "Januari";
+                    } else if( $bulan == 02 ) {
+                        $bulan = "Februari";
+                    } else if( $bulan == 03 ) {
+                        $bulan = "Maret";
+                    } else if( $bulan == 04 ) {
+                        $bulan = "April";
+                    } else if( $bulan == 05 ) {
+                        $bulan = "Mei";
+                    } else if( $bulan == 06 ) {
+                        $bulan = "Juni";
+                    } else if( $bulan == 07 ) {
+                        $bulan = "Juli";
+                    } else if( $bulan == "08" ) {
+                        $bulan = "Agustus";
+                    } else if( $bulan == "09" ) {
+                        $bulan = "September";
+                    } else if( $bulan == 10 ) {
+                        $bulan = "Oktober";
+                    } else if( $bulan == 11 ) {
+                        $bulan = "November";
+                    } else if( $bulan == 12 ) {
+                        $bulan = "Desember";
+                    } else {
+                        $bulan = "tidak ditemukan!";
+                    }
+                    // akhir format tanggal-bulan-tahun lahir
+
 
                     // menampilkan isi tabel
                     echo "<tr>" . 
                             "<td>" . $nomor++ . ".</td>" .
                             "<td>" . $uwu['nama'] . "</td>" .
-                            "<td>" . $y . "</td>" .
+                            "<td>" . $tanggal . " " . $bulan . " " . $tahun . "</td>" .
+                            "<td>" . $y . " tahun</td>" .
                             "<td>" . $uwu['alamat'] . "</td>" .
                             "<td>" . $uwu['kelas'] . "</td>" .
                             "<td>" . $uwu['nilai'] . "</td>" .
