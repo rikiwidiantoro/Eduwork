@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tugas function javascript</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+    <h1>Tugas Function Javascript</h1>
+    <p>Menampilkan macam macam function di javascript menggunakan parameter.</p>
+
+    <ol>
+        <li>
+            <h4>function luas persegi</h4>
+            <p>jika sebuah persegi memiliki sisi 5cm. maka luasnya adalah</p>
+            <a href="#" onclick="luasPersegi(5);">KLIK</a><span> untuk mengetahui jawabannya.</span>
+        </li>
+        <li>
+            <h4>function luas segitiga</h4>
+            <p>jika sebuah segitiga memiliki alas 10cm dan tinggi 20cm. maka luasnya adalah</p>
+            <a href="#" onclick="luasSegitiga(10, 20);">KLIK</a><span> untuk mengetahui jawabannya.</span>
+        </li>
+        <li>
+            <h4>function volume balok</h4>
+            <p>jika sebuah balok memiliki panjang 10cm, lebar 8cm dan tinggi 6cm. maka volumenya adalah</p>
+            <a href="#" onclick="volumeBalok(10, 8, 6);">KLIK</a><span> untuk mengetahui jawabannya.</span>
+        </li>
+        <li>
+            <h4>function volume kubus</h4>
+            <p>jika sebuah kubus memiliki rusuk 7cm. maka volumenya adalah</p>
+            <a href="#" onclick="volumeKubus(5);">KLIK</a><span> untuk mengetahui jawabannya.</span>
+        </li>
+    </ol>
+
+
+    <br><hr>
+    <footer>
+        <p>Tugas PHP - function Eduwork | Riki Widiantoro | <a href="https://github.com/rikiwidiantoro" target="_blank"><i class="fab fa-github"> rikiwidiantoro</i></a></p>
+    </footer>
+
+
+
+    <script>
+        function luasPersegi(sisi) {
+            let luasPersegi = sisi * sisi;
+            document.write('<h1>' + luasPersegi + ' cm2 </h1>');
+            document.write("<br><br><a href='tugas_javascript_function.html'>kembali</a>");
+            console.log(luasPersegi + ' cm2');
+        }
+        function luasSegitiga(alas, tinggi) {
+            let luasSegitiga = 1/2 * alas * tinggi;
+            document.write('<h1>' + luasSegitiga + ' cm2 </h1>');
+            document.write("<br><br><a href='tugas_javascript_function.html'>kembali</a>");
+            console.log(luasSegitiga + ' cm2');
+        }
+        function volumeBalok(panjang, lebar, tinggi) {
+            let volumeBalok = panjang * lebar * tinggi;
+            document.write('<h1>' + volumeBalok+ ' cm3 </h1>');
+            document.write("<br><br><a href='tugas_javascript_function.html'>kembali</a>");
+            console.log(volumeBalok + ' cm3');
+        }
+        function volumeKubus(rusuk) {
+            let volumeKubus = rusuk ** 3;
+            document.write('<h1>' + volumeKubus+ ' cm3 </h1>');
+            document.write("<br><br><a href='tugas_javascript_function.html'>kembali</a>");
+            console.log(volumeKubus + ' cm3');
+        }
+    </script>
+</body>
+</html>
