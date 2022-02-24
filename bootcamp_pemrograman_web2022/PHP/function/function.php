@@ -1,3 +1,68 @@
+<?php
+
+// bangun datar
+function persegi($sisiPersegi) {
+    // $sisiPersegi = 5;
+    $luasPersegi = $sisiPersegi * $sisiPersegi;
+    echo $luasPersegi;
+}
+
+function persegiPanjang($panjangPersegiPanjang, $lebarPersegiPanjang) {
+    // $panjangPersegiPanjang = 10;
+    // $lebarPersegiPanjang = 5;
+    $luasPersegiPanjang = $panjangPersegiPanjang * $lebarPersegiPanjang;
+    echo $luasPersegiPanjang;
+}
+
+function segitiga($alasSegitiga, $tinggiSegitiga) {
+    $luasSegitiga = 1/2 * $alasSegitiga * $tinggiSegitiga;
+    echo $luasSegitiga;
+}
+
+function lingkaran($jarijariLingkaran) {
+    $phi = 22/7;
+    $luasLingkaran = $phi * ($jarijariLingkaran ** 2);
+    echo $luasLingkaran;
+}
+
+function layang($diagonal1, $diagonal2) {
+    $luasLayang = 1/2 * $diagonal1 * $diagonal2;
+    echo $luasLayang;
+}
+
+
+// bangun ruang
+function kubus($rusuk) {
+    $volumeKubus = $rusuk ** 3;
+    echo $volumeKubus;
+}
+
+function balok($panjangBalok, $lebarBalok, $tinggiBalok) {
+    $volumeBalok = $panjangBalok * $lebarBalok * $tinggiBalok;
+    echo $volumeBalok;
+}
+
+function tabung($jarijariTabung, $tinggiTabung) {
+    $phi = 22/7;
+    $volumeTabung = $phi * ($jarijariTabung ** 2) * $tinggiTabung;
+    echo $volumeTabung;
+}
+
+function bola($jarijariBola) {
+    $phi = 22/7;
+    $volumeBola = 4/3 * $phi * ($jarijariBola ** 3);
+    echo $volumeBola;
+}
+
+function kerucut($jarijariKerucut, $tinggiKerucut) {
+    $phi = 22/7;
+    $volumeKerucut = 1/3 * $phi * ($jarijariKerucut ** 2) * $tinggiKerucut;
+    echo $volumeKerucut;
+}
+
+?>
+
+
 <!doctype html>
 <html lang="en">
     <head>
@@ -98,20 +163,61 @@
                             <p>soal = Sebuah segitiga memiliki ukuran sisi alas 10 cm dan tinggi 7 cm. Jika ukuran sisi-sisi miringnya adalah 8 cm dan 9 cm, hitunglah berapa luas segitiga tersebut!</p>
                             <p>jawab <br> Luas Segitiga = 1/2 x a x t = <?= segitiga(10, 7); ?> cm2</p>
                         </li>
+                        <li>
+                            <h4>Lingkaran</h4>
+                            <p>rumus Luas = phi x r pangkat 2</p>
+                            <p>soal = Sebuah lingkaran memiliki ukuran jari-jari 7 cm. Hitunglah berapa luas lingkaran tersebut!</p>
+                            <p>jawab <br> Luas Lingkaran = phi x r2 = <?= lingkaran(7); ?> cm2</p>
+                        </li>
+                        <li>
+                            <h4>Layang-layang</h4>
+                            <p>rumus Luas = 1/2 x diagonal 1 x diagonal 2</p>
+                            <p>soal = Sebuah layang-layang memiliki ukuran diagonal1 10 cm dan diagonal2 20 cm. Hitunglah berapa luas layang-layang tersebut!</p>
+                            <p>jawab <br> Luas Layang-layang = 1/2 x d1 x d2 = <?= layang(10, 20); ?> cm2</p>
+                        </li>
                     </ol>
                 </div>
                 <!-- akhir bangun datar -->
+                <!-- bangun ruang -->
+                <div class="col-md-6">
+                    <ol>
+                        <li>
+                            <h4>Kubus</h4>
+                            <p>rumus Volume = rusuk pangkat 3</p>
+                            <p>soal = Jika suatu kubus memiliki panjang rusuk 7 cm. Hitunglah volume kubus tersebut!</p>
+                            <p>jawab <br> Volume Kubus = r3 = <?= kubus(7); ?> cm3</p>
+                        </li>
+                        <li>
+                            <h4>Balok</h4>
+                            <p>rumus Volume = panjang x lebar x tinggi</p>
+                            <p>soal = Suatu balok memiliki panjang 10 cm, lebar 8 cm dan tinggi 6 cm. Hitunglah volume balok tersebut!</p>
+                            <p>jawab <br> Volume Balok = p x l x t = <?= balok(10, 8, 6); ?> cm3</p>
+                        </li>
+                        <li>
+                            <h4>Tabung</h4>
+                            <p>rumus Volume = phi x r pangkat 2 x tinggi</p>
+                            <p>soal = jika sebuah tabung memiliki jari-jari 14 cm dan tinggi 20 cm. Berapakah volume tabung tersebut?</p>
+                            <p>jawab <br> Volume Tabung = phi x r2 x t = <?= tabung(14, 20); ?> cm3</p>
+                        </li>
+                        <li>
+                            <h4>Kerucut</h4>
+                            <p>rumus Volume = 1/3 x phi x r pangkat 2 x tinggi</p>
+                            <p>soal = Hitunglah volume kerucut yang mempunyai jari-jari alas 7 cm dan tinggi 20 cm!</p>
+                            <p>jawab <br> Volume Kerucut = 1/3 x phi x r2 x t = <?= kerucut(7, 20); ?> cm3</p>
+                        </li>
+                        <li>
+                            <h4>Bola</h4>
+                            <p>rumus Volume = 4/3 x phi x r pangkat 3</p>
+                            <p>soal = Doni di beri sebuah bola oleh ayah nya yang memiliki jari – jari sebesar 14cm, maka carilah volume bola?</p>
+                            <p>jawab <br> Volume Bola = 4/3 x phi x r3 = <?= bola(14); ?> cm3</p>
+                        </li>
+                    </ol>
+                </div>
+                <!-- akhir bangun ruang -->
             </div>
             <!-- akhir isi -->
-        
         </div>
         <!-- akhir main -->
-
-
-
-
-
-
 
 
         <!-- footer -->
@@ -131,71 +237,3 @@
         -->
     </body>
 </html>
-
-
-<?php
-
-
-// bangun datar
-function persegi($sisiPersegi) {
-    // $sisiPersegi = 5;
-    $luasPersegi = $sisiPersegi * $sisiPersegi;
-    echo $luasPersegi;
-}
-
-function persegiPanjang($panjangPersegiPanjang, $lebarPersegiPanjang) {
-    // $panjangPersegiPanjang = 10;
-    // $lebarPersegiPanjang = 5;
-    $luasPersegiPanjang = $panjangPersegiPanjang * $lebarPersegiPanjang;
-    echo $luasPersegiPanjang;
-}
-
-function segitiga($alasSegitiga, $tinggiSegitiga) {
-    $luasSegitiga = 1/2 * $alasSegitiga * $tinggiSegitiga;
-    echo $luasSegitiga;
-}
-
-function lingkaran($jarijariLingkaran) {
-    $phi = 22/7;
-    $luasLingkaran = $phi * ($jarijariLingkaran ** 2);
-    echo $luasLingkaran;
-}
-
-function layang($diagonal1, $diagonal2) {
-    $luasLayang = 1/2 * $diagonal1 * $diagonal2;
-    echo $luasLayang;
-}
-
-
-
-// bangun ruang
-function kubus($rusuk) {
-    $volumeKubus = $rusuk ** 3;
-    echo $volumeKubus;
-}
-
-function balok($panjangBalok, $lebarBalok, $tinggiBalok) {
-    $volumeBalok = $panjangBalok * $lebarBalok * $tinggiBalok;
-    echo $volumeBalok;
-}
-
-function tabung($jarijariTabung, $tinggiTabung) {
-    $phi = 22/7;
-    $volumeTabung = $phi * ($jarijariTabung ** 2) * $tinggiTabung;
-    echo $volumeTabung;
-}
-
-function bola($jarijariBola) {
-    $phi = 22/7;
-    $volumeBola = 4/3 * $phi * ($jarijariBola ** 3);
-    echo $volumeBola;
-}
-
-function kerucut($jarijariKerucut, $tinggiKerucut) {
-    $phi = 22/7;
-    $volumeKerucut = 1/3 * $phi * ($jarijariKerucut ** 2) * $tinggiKerucut;
-    echo $volumeKerucut;
-}
-
-
-?>
