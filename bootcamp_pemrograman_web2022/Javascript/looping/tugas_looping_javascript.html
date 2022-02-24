@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tugas looping javascript</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+    <h1>tugas looping javascript</h1>
+    <p>Explore macam macam looping lainnya dan buatlah macam macam looping</p>
+
+    <p>Tugas Javascript - looping/perulangan Eduwork | Riki Widiantoro | <a href="https://github.com/rikiwidiantoro" target="_blank"><i class="fab fa-github"> rikiwidiantoro</i></a></p>
+    <hr><br>
+
+    <script>
+        // looping for
+        document.write('<h4>looping for</h4>');
+        for( let angka = 1; angka <= 10; angka++ ) {
+            document.write('<p>angka ke-' + angka + ' </p>');
+            console.log('angka ke-' + angka);
+        }
+
+        document.write('<br>');
+
+        // looping while
+        document.write('<h4>looping while</h4>');
+        let bilangan = 20;
+        while( bilangan > 10) {
+            document.write('<p>bilangan ke-' + bilangan + ' </p>');
+            console.log('bilangan ke-' + bilangan);
+            bilangan--;
+        }
+
+        document.write('<br>');
+
+        // looping do while
+        document.write('<h4>looping do while</h4>');
+        let a = 0;
+        do {
+            document.write('<p>ini looping do while ke-' + a + ' </p>');
+            console.log('ini looping do while ke-' + a);
+            a++;
+        } while( a < 10 );
+
+        document.write('<br>');
+
+        // looping method/fungsi repeat()
+        document.write('<h4>looping repeat()</h4>');
+        document.write('<p>aku ganteng sekali wkwk</p>'.repeat(5));
+        console.log('aku ganteng sekali wkwk '.repeat(5));
+
+        document.write('<br>');
+
+        // looping foreach = cocok untuk array
+        // pakai javascript es6 arrow function =>
+        document.write('<h4>looping foreach</h4>');
+        const dataBuah = ['apel', 'jeruk', 'pisang'];
+        dataBuah.forEach((buah, index) =>  document.write("<p>indeks ke-" + index + " adalah buah " + buah + "</p>"));
+        dataBuah.forEach((buah, index) => console.log("indeks ke-" + index + " adalah buah " + buah));
+        
+
+    </script>
+</body>
+</html>
