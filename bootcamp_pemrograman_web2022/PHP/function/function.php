@@ -13,6 +13,10 @@
         <style>
             body {
                 font-family: verdana;
+                text-align: justify;
+            }
+            .bangundatar {
+                border-right: 1px solid silver;
             }
             footer {
                 font-size: 14px;
@@ -57,37 +61,52 @@
         <!-- akhir navbar -->
 
         <!-- main -->
-        <div class="container">
-            <!-- bangun datar -->
-
+        <div class="container p-4">
             <!-- header -->
             <div class="row">
                 <div class="col">
                     <h1>Bangun Datar</h1>
                     <hr width="300px">
                 </div>
-            </div>
-            <!-- akhir header -->
-
-            <!-- isi -->
-            <div class="row">
                 <div class="col">
-                    <h5>Persegi</h5>
-
+                    <h1>Bangun Ruang</h1>
+                    <hr width="300px">
                 </div>
             </div>
-            <!-- akhir isi -->
+            <!-- akhir header -->
             
-            <!-- akhir bangun datar -->
+            <!-- isi -->
+            <div class="row">
+                <!-- bangun datar -->
+                <div class="col-md-6 bangundatar">
+                    <ol>
+                        <li>
+                            <h4>Persegi</h4>
+                            <p>rumus Luas = sisi x sisi</p>
+                            <p>soal = Sebuah persegi memiliki ukuran sisi 5 cm. Hitunglah berapa luas persegi tersebut!</p>
+                            <p>jawab <br> Luas Persegi = s x s = <?= persegi(5); ?> cm2</p>
+                        </li>
+                        <li>
+                            <h4>Persegi Panjang</h4>
+                            <p>rumus Luas = panjang x lebar</p>
+                            <p>soal = Sebuah persegi panjang memiliki ukuran panjang 10 cm dan lebar 5 cm. Hitunglah berapa luas persegi panjang tersebut!</p>
+                            <p>jawab <br> Luas Persegi Panjang = p x l = <?= persegiPanjang(10, 5); ?> cm2</p>
+                        </li>
+                        <li>
+                            <h4>Segitiga</h4>
+                            <p>rumus Luas = 1/2 x alas x tinggi</p>
+                            <p>soal = Sebuah segitiga memiliki ukuran sisi alas 10 cm dan tinggi 7 cm. Jika ukuran sisi-sisi miringnya adalah 8 cm dan 9 cm, hitunglah berapa luas segitiga tersebut!</p>
+                            <p>jawab <br> Luas Segitiga = 1/2 x a x t = <?= segitiga(10, 7); ?> cm2</p>
+                        </li>
+                    </ol>
+                </div>
+                <!-- akhir bangun datar -->
+            </div>
+            <!-- akhir isi -->
         
         </div>
         <!-- akhir main -->
 
-
-<div class="container">
-
-<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium quia qui minima quas! Eos pariatur provident assumenda minus ipsa? Ducimus voluptas aliquam modi, odio qui blanditiis quam ratione, doloribus perspiciatis tenetur laudantium exercitationem illum! Officiis deserunt, repellat modi tempora iure at cumque incidunt aliquam nostrum, repudiandae distinctio soluta ducimus. Odit corrupti minima consectetur illo. Consequuntur ut voluptatem asperiores totam perspiciatis assumenda aspernatur debitis, quam iure! Neque culpa quo deleniti ullam expedita provident, dolorem quas, repudiandae, ab necessitatibus atque voluptate? Laboriosam illo nisi incidunt quia ex illum, fuga numquam possimus omnis quam voluptatem hic consequatur accusamus quae eius corporis explicabo inventore.</p>
-</div>
 
 
 
@@ -97,11 +116,11 @@
 
         <!-- footer -->
         <footer class="bg-dark text-light p-2">
-            <p class="text-center mt-2">Tugas PHP - operator Eduwork | Riki Widiantoro | <a href="https://github.com/rikiwidiantoro" target="_blank"><i class="fab fa-github"> rikiwidiantoro</i></a></p>
+            <p class="text-center mt-2">Tugas PHP - function Eduwork | Riki Widiantoro | <a href="https://github.com/rikiwidiantoro" target="_blank"><i class="fab fa-github"> rikiwidiantoro</i></a></p>
         </footer>
 
         <!-- Optional JavaScript; choose one of the two! -->
-
+        
         <!-- Option 1: Bootstrap Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
@@ -116,13 +135,13 @@
 
 <?php
 
+
+// bangun datar
 function persegi($sisiPersegi) {
     // $sisiPersegi = 5;
     $luasPersegi = $sisiPersegi * $sisiPersegi;
     echo $luasPersegi;
 }
-persegi(10);
-echo "<br>";
 
 function persegiPanjang($panjangPersegiPanjang, $lebarPersegiPanjang) {
     // $panjangPersegiPanjang = 10;
@@ -130,33 +149,53 @@ function persegiPanjang($panjangPersegiPanjang, $lebarPersegiPanjang) {
     $luasPersegiPanjang = $panjangPersegiPanjang * $lebarPersegiPanjang;
     echo $luasPersegiPanjang;
 }
-persegiPanjang(10,7);
-echo "<br>";
 
 function segitiga($alasSegitiga, $tinggiSegitiga) {
     $luasSegitiga = 1/2 * $alasSegitiga * $tinggiSegitiga;
     echo $luasSegitiga;
 }
-segitiga(10,7);
-echo "<br>";
 
 function lingkaran($jarijariLingkaran) {
     $phi = 22/7;
-    $luasLingkaran = $phi * $jarijariLingkaran ** 2;
+    $luasLingkaran = $phi * ($jarijariLingkaran ** 2);
     echo $luasLingkaran;
 }
-lingkaran(7);
-echo "<br>";
 
 function layang($diagonal1, $diagonal2) {
     $luasLayang = 1/2 * $diagonal1 * $diagonal2;
     echo $luasLayang;
 }
-layang(10, 20);
-echo "<br>";
 
 
 
+// bangun ruang
+function kubus($rusuk) {
+    $volumeKubus = $rusuk ** 3;
+    echo $volumeKubus;
+}
+
+function balok($panjangBalok, $lebarBalok, $tinggiBalok) {
+    $volumeBalok = $panjangBalok * $lebarBalok * $tinggiBalok;
+    echo $volumeBalok;
+}
+
+function tabung($jarijariTabung, $tinggiTabung) {
+    $phi = 22/7;
+    $volumeTabung = $phi * ($jarijariTabung ** 2) * $tinggiTabung;
+    echo $volumeTabung;
+}
+
+function bola($jarijariBola) {
+    $phi = 22/7;
+    $volumeBola = 4/3 * $phi * ($jarijariBola ** 3);
+    echo $volumeBola;
+}
+
+function kerucut($jarijariKerucut, $tinggiKerucut) {
+    $phi = 22/7;
+    $volumeKerucut = 1/3 * $phi * ($jarijariKerucut ** 2) * $tinggiKerucut;
+    echo $volumeKerucut;
+}
 
 
 ?>

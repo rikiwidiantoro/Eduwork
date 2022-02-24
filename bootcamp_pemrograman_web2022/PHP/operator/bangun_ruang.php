@@ -18,22 +18,22 @@
         <!-- kubus -->
         <li>
             <h4>Kubus</h4>
-            <p>rumus Volume : rusuk pangkat 3</p>
-            <p>soal : Jika suatu kubus memiliki panjang rusuk 7 cm. Hitunglah volume kubus tersebut!</p>
+            <p>rumus Volume = rusuk pangkat 3</p>
+            <p>soal = Jika suatu kubus memiliki panjang rusuk 7 cm. Hitunglah volume kubus tersebut!</p>
             <p>
                 <?php 
                 $r = 7; 
                 $volumeKubus = $r ** 3;
                 ?>
-                jawab : Volume = r3 = <?= $volumeKubus ?> cm3
+                jawab = Volume = r3 = <?= $volumeKubus ?> cm3
             </p>
         </li>
 
         <!-- balok -->
         <li>
             <h4>Balok</h4>
-            <p>rumus Volume : panjang x lebar x tinggi</p>
-            <p>soal : Suatu balok memiliki panjang 10 cm, lebar 8 cm dan tinggi 6 cm. Hitunglah volume balok tersebut!</p>
+            <p>rumus Volume = panjang x lebar x tinggi</p>
+            <p>soal = Suatu balok memiliki panjang 10 cm, lebar 8 cm dan tinggi 6 cm. Hitunglah volume balok tersebut!</p>
             <p>
                 <?php 
                 $p = 10; 
@@ -41,23 +41,23 @@
                 $t = 6;
                 $volumeBalok = $p * $l * $t;
                 ?>
-                jawab : Volume = p x l x t = <?= $volumeBalok ?> cm3
+                jawab = Volume = p x l x t = <?= $volumeBalok ?> cm3
             </p>
         </li>
 
         <!-- tabung -->
         <li>
             <h4>Tabung</h4>
-            <p>rumus Volume : phi x r pangkat 2 x tinggi</p>
-            <p>soal : ika sebuah tabung memiliki jari-jari 14 cm dan tinggi 20 cm. Berapakah volume tabung tersebut?</p>
+            <p>rumus Volume = phi x r pangkat 2 x tinggi</p>
+            <p>soal = jika sebuah tabung memiliki jari-jari 14 cm dan tinggi 20 cm. Berapakah volume tabung tersebut?</p>
             <p>
                 <?php 
                 $phi = 22/7; 
                 $r = 14;
                 $t = 20; 
-                $volumeTabung = $phi * $r ** 2 * $t;
+                $volumeTabung = $phi * ($r ** 2) * $t;
                 ?>
-                jawab : Volume = phi x r2 x t = <?= $volumeTabung ?> cm3
+                jawab = Volume = phi x r2 x t = <?= $volumeTabung ?> cm3
             </p>
         </li>
 
