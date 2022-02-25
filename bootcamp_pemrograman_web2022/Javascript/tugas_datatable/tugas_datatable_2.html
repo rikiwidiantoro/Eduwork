@@ -9,7 +9,7 @@
     <style>
         h1 {
             text-align: center;
-            margin: 20px auto 50px;
+            margin: 40px auto 60px;
         }
         body {
             padding: 0px 200px;
@@ -58,6 +58,34 @@
                 <td>Pendidikan Matematika</td>
                 <td>Keguruan Ilmu Pendidikan</td>
             </tr>
+            <tr>
+                <td>5.</td>
+                <td>555555</td>
+                <td>Kiwi jdsvbj djsvbsjkdvs</td>
+                <td>Hukum</td>
+                <td>Hukum</td>
+            </tr>
+            <tr>
+                <td>6.</td>
+                <td>666666</td>
+                <td>Dian djsvnj jdsv jsvdds</td>
+                <td>Teknik Mesin</td>
+                <td>Teknik</td>
+            </tr>
+            <tr>
+                <td>7.</td>
+                <td>777777</td>
+                <td>Rori jsvb sjdvbsjdvb</td>
+                <td>Teknik Elektro</td>
+                <td>Teknik</td>
+            </tr>
+            <tr>
+                <td>8.</td>
+                <td>888888</td>
+                <td>adcdc sdevdved</td>
+                <td>Akuntansi</td>
+                <td>Ekonomi</td>
+            </tr>
         </tbody>
     </table>
 
@@ -68,7 +96,11 @@
     <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.js"></script>
     <script>
         $(document).ready(function() {
-            $('#table').DataTable();
+            $('#table').DataTable({
+                "scrollY":        "200px",
+                "scrollCollapse": true,
+                "paging":         false
+            });
             
         });
     </script>
