@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>coba jquery</title>
+</head>
+<body>
+    <h1>coba jruery</h1>
+
+    <button id="show">show</button>
+    <button id="hide">hide</button>
+    <button id="ganti">ganti</button>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores nesciunt quis minus repudiandae debitis non! Porro pariatur cum dolorum quibusdam reiciendis fuga quod praesentium molestias nostrum, modi aliquam sunt corrupti nobis iste. Impedit harum odit quasi! Ducimus voluptatem asperiores dicta aut distinctio qui voluptate earum magnam odio et optio perferendis, quaerat molestias deleniti possimus, ratione fugiat illum nobis, officia cumque adipisci. Aperiam sunt sequi ut porro fuga veniam nisi deleniti recusandae omnis deserunt amet quis dolorem facilis totam laudantium molestiae, mollitia impedit assumenda cum magnam ipsa exercitationem dolores? Odit enim dolor voluptate quae possimus, atque magni qui consectetur deleniti vel!</p>
+
+    <p class="pa">halo dunia</p>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#show').click(function() {
+                $('p').show();
+            });
+            $('#hide').click(function() {
+                $('p').hide();
+            });
+            $('#ganti').click(function() {
+                $('.pa').text('Hello World!');
+            });
+        });
+    </script>
+
+</body>
+</html>
