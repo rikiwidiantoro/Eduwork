@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+        <title>study kasus 1 javascript</title>
+
+        <style>
+            body {
+                background-color: #f5f5f5;
+            }
+            .curso {
+                cursor: not-allowed;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div class="container-fluid m-5">
+            <div class="row">
+                <div class="col-md-4">
+                    <form>
+                        <h3>Formulir</h3>
+                        <hr width="120">
+                        <div class="form-group mb-2">
+                            <label for="exampleInputEmail1">First Name</label>
+                            <input type="text" class="form-control" id="exampleInputEmail1" name="first-name">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="exampleInputPassword1">Last Name</label>
+                            <input type="text" class="form-control" id="exampleInputPassword1" name="last-name">
+                        </div>
+                        <button type="submit" class="btn btn-primary curso" id="tombol">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                // disabled button
+                $('#tombol').attr('disabled', true);
+                // $('#tombol').addClass('curso');
+
+                let firstName = '';
+                let lastName = '';
+                $('input[name=first-name]').on('input', function() {
+                    firstName = $(this).val();
+
+                    nyalaButton();
+                });
+                $('input[name=last-name]').on('input', function() {
+                    lastName = $(this).val();
+
+                    nyalaButton();
+                });
+
+                function nyalaButton() {
+                    if( firstName !== '' && lastName !== '' ) {
+                        $('#tombol').attr('disabled', false);
+                    } else {
+                        $('#tombol').attr('disabled', true);
+                    }
+                }
+            });
+        </script>
+    </body>
+</html>
