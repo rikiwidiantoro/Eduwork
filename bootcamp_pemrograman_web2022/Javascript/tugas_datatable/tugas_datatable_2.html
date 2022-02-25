@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tugas data table 2</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.css">
+    <style>
+        h1 {
+            text-align: center;
+            margin: 20px auto 50px;
+        }
+        body {
+            padding: 0px 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>tugas data table 2 : data mahasiswa</h1>
+
+    <table id="table" class="display">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Nomor Induk</th>
+                <th>Nama</th>
+                <th>Program Studi</th>
+                <th>Fakultas</th>
+            </tr>
+        </thead>
+        <tbody class="tbody">
+            <tr>
+                <td>1.</td>
+                <td>111111</td>
+                <td>Riki sjvb dsjvbsd</td>
+                <td>Teknik Informatika</td>
+                <td>Teknik</td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td>222222</td>
+                <td>Widi jkdjkdv</td>
+                <td>Ilmu Pemerintahan</td>
+                <td>Ilmu Sosial dan Ilmu Pemerintahan</td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td>333333</td>
+                <td>Anto svb sdhvbshdbvsv</td>
+                <td>Keperawatan</td>
+                <td>Ilmu Kesehatan</td>
+            </tr>
+            <tr>
+                <td>4.</td>
+                <td>444444</td>
+                <td>Toro jvdbdvjsbvsdbvb</td>
+                <td>Pendidikan Matematika</td>
+                <td>Keguruan Ilmu Pendidikan</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#table').DataTable();
+            
+        });
+    </script>
+</body>
+</html>
