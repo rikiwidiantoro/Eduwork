@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tugas data table 1</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.css">
+    <style>
+        h1 {
+            text-align: center;
+            margin: 20px auto 50px;
+        }
+        body {
+            padding: 0px 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>tugas data table 1 : daftar komik</h1>
+
+    <table id="table" class="display">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Judul</th>
+                <th>Genre</th>
+                <th>Harga</th>
+            </tr>
+        </thead>
+        <tbody class="tbody">
+            <tr>
+                <td>1.</td>
+                <td>Shingeki no Kyojin</td>
+                <td>adventure, horror, fantasi</td>
+                <td>Rp. 100 000</td>
+            </tr>
+            <tr>
+                <td>2.</td>
+                <td>One Piece</td>
+                <td>adventure, fantasi</td>
+                <td>Rp. 80 000</td>
+            </tr>
+            <tr>
+                <td>3.</td>
+                <td>Boku no hero Academia</td>
+                <td>fantasi</td>
+                <td>Rp. 50 000</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#table').DataTable();
+            let komiks = [
+                {
+                    'judul': 'Shingeki no Kyojin',
+                    'genre': 'adventure, horror, fantasi',
+                    'harga': 100
+                },
+                {
+                    'judul': 'One Piece',
+                    'genre': 'adventure, fantasi',
+                    'harga': 80
+                },
+                {
+                    'judul': 'Boku no hero Academia',
+                    'genre': 'fantasi',
+                    'harga': 50
+                }
+            ];
+            
+            $.each(komiks, function(index, value) {
+                // console.log(value['judul']);
+                // $('.tbody').html(`<tr>
+                //     <td>${value['judul']}</td>
+                //     <td>${value['genre']}</td>
+                //     <td>${value['harga']}</td>
+                // </tr>`);
+            });
+        });
+    </script>
+</body>
+</html>
