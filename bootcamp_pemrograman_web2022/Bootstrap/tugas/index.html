@@ -14,36 +14,114 @@
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
 
         <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                position: relative;
+            }
+            .nnav {
+                background-color: white;
+                margin-top: -80px;
+                position: fixed;
+                z-index: 10;
+            }
+            .navbar {
+                font-size: 13px;
+                font-weight: 700;
+                
+            }
+            .navbar ul li a {
+                color: rgb(112, 112, 112);
+                text-decoration: none;
+            }
+            .navbar ul li .active {
+                color: #4DB7FE;
+                text-decoration: none;
+            }
+            .navbar ul li a:hover {
+                color: #4DB7FE;
+            }
+            .navbar .regis {
+                font-size: 11px;
+                border-radius: 20px;
+                font-weight: 700;
+                padding: 10px 30px;
+                background-color: #4DB7FE;
+            }
+            .navbar .dropdown-menu {
+                margin-top: 15px;
+            }
+            .navbar .dropdown-menu li {
+                width: 290px;
+                font-size: 14px;
+                padding: 3px 2px;
+            }
+            .navbar .dropdown-menu li a:hover {
+                color: #4DB7FE;
+                background-color: white;
+            }
+
+            .carousel{
+                margin-top: 80px;
+            }
+
             .main {
                 margin-top: 100px;
                 margin-bottom: 100px;
+            }
+            .row {
+                width: 100%;
+            }
+            .fa {
+                font-size: 0.9em;
+            }
+
+            .main {
+                padding-left: 150px;
+            }
+            .main .iconn {
+                position: absolute;
+                margin-left: -65px;
+                font-size: 2.5em;
+            }
+
+            .footer {
+                background-color: #4DB7FE;
             }
         </style>
     </head>
     <body>
 
         <!-- awal navbar -->
-        <div class="container-fluid">
-            <div class="container navbar mt-3">
+        <div class="container-fluid nnav">
+            <div class="container navbar mt-3 mb-2">
                 <div class="row">
-                    <div class="col-md-5">
-                        <img src="https://eduwork.id/images/logo3.png" alt="eduwork" width="200">
+                    <div class="col-md-5 offset-1">
+                        <img src="https://eduwork.id/images/logo3.png" alt="eduwork" width="180">
                     </div>
-                    <div class="d-flex">
-                        <div class="col-md-2">
-                            <a href="">Home</a>
-                        </div>
-                        <div class="col-md-2">
-                            <a href="">Kelas</a>
-                        </div>
-                        <div class="col-md-2">
-                            <a href="">Member</a>
-                        </div>
-                        <div class="col-md-1">
-                            <a href="">
-                                <i class='fas fa-bell'></i>
-                            </a>
-                        </div>
+                    <div class="col-md-5 pb-2">
+                        <ul class="nav justify-content-end">
+                            <li class="nav-item px-3">
+                                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            </li>
+                            <li class="nav-item px-3">
+                                <div class="dropdown m-2">
+                                    <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                                        Kelas
+                                    </a>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                        <li><a class="dropdown-item" href="#">Private Mentoring</a></li>
+                                        <li><a class="dropdown-item" href="#">Webinar</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav-item px-3">
+                                <a class="nav-link" href="#"><i class="fa fa-sign-in" aria-hidden="true"></i> Sign In</a>
+                                
+                            </li>
+                            <li class="nav-item px-3">
+                                <a class="btn nav-link text-white regis">REGISTER <i class="fa fa-plus"></i></a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -66,9 +144,9 @@
             
                     <div class="container">
                         <div class="carousel-caption text-start">
-                            <h1>Example headline.</h1>
-                            <p>Some representative placeholder content for the first slide of the carousel.</p>
-                            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
+                            <h2>Raih profesi idamanmu, kami <br> bantu sampai diterima kerja</h2>
+                            <p>tanpa biaya pendaftaran !</p>
+                            <p><a class="btn btn-lg btn-primary" href="#">DAFTAR SEKARANG</a></p>
                         </div>
                     </div>
                 
@@ -90,9 +168,9 @@
         
                 <div class="container">
                     <div class="carousel-caption text-end">
-                        <h1>One more for good measure.</h1>
-                        <p>Some representative placeholder content for the third slide of this carousel.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
+                        <h2>Program Pelatihan & Penyaluran ISA,</h2>
+                        <p>bayar nanti setelah berpenghasilan dan bisa dicicil sampai 12x.</p>
+                        <p><a class="btn btn-lg btn-primary" href="#">DAFTAR SEKARANG</a></p>
                     </div>
                 </div>
             </div>
@@ -111,40 +189,59 @@
         <!-- awal main -->
         <div class="container main">
             <div class="row">
-                <div class="col-md-4">
-                    <h6>Apa sih eduwork itu?</h6>
+                <div class="col-md-3 offset-1 px-5">
+                    <div class="iconn">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <h4>Apa sih eduwork itu?</h4>
                     <p>Platform yang membantu kamu mendapatkan pekerjaan, di bimbing oleh mentor yang akan menjadi teman seperjuanganmu dalam belajar & ber-karir.</p>
                 </div>
-                <div class="col-md-4">
-                    <h6>Apa sih eduwork itu?</h6>
-                    <p>Platform yang membantu kamu mendapatkan pekerjaan, di bimbing oleh mentor yang akan menjadi teman seperjuanganmu dalam belajar & ber-karir.</p>
+                <div class="col-md-3 px-5">
+                    <div class="iconn">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <h4>Program ISA</h4>
+                    <p>Dengan program Income Sharing Agreement, kamu bisa fokus belajar dulu, bayarnya nanti setelah mendapatkan kerja / penghasilan.</p>
                 </div>
-                <div class="col-md-4">
-                    <h6>Apa sih eduwork itu?</h6>
-                    <p>Platform yang membantu kamu mendapatkan pekerjaan, di bimbing oleh mentor yang akan menjadi teman seperjuanganmu dalam belajar & ber-karir.</p>
+                <div class="col-md-3 px-5">
+                    <div class="iconn">
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <h4>Berbagai Mentor</h4>
+                    <p>Ada berbagai mentor / kelas yang tersedia berbagai bidang. Pilih mentor atau bidang yang kalian inginkan. Dan kejar pekerjaan idaman kalian !</p>
                 </div>
-            </div>
-            <div class="row mt-4">
-                <div class="col-md-4">
-                    <h6>Apa sih eduwork itu?</h6>
-                    <p>Platform yang membantu kamu mendapatkan pekerjaan, di bimbing oleh mentor yang akan menjadi teman seperjuanganmu dalam belajar & ber-karir.</p>
+                <div class="col-md-3 offset-1 px-5">
+                    <div class="iconn">
+                        <i class="fa fa-cogs"></i>
+                    </div>
+                    <h4>Penyaluran kerja</h4>
+                    <p>Setelah lulus kamu akan dibantu untuk mendapatkan pekerjaan sesuai dengan ilmu yang kalian pelajari.</p>
                 </div>
-                <div class="col-md-4">
-                    <h6>Apa sih eduwork itu?</h6>
-                    <p>Platform yang membantu kamu mendapatkan pekerjaan, di bimbing oleh mentor yang akan menjadi teman seperjuanganmu dalam belajar & ber-karir.</p>
+                <div class="col-md-3 px-5">
+                    <div class="iconn">
+                        <i class="fa fa-user"></i>
+                    </div>
+                    <h4>Ilmu Praktis</h4>
+                    <p>Dibimbing oleh mentor yang berpengalaman di dunia industri, jadi belajar praktek praktis, bukan sebatas teori akademik!</p>
                 </div>
-                <div class="col-md-4">
-                    <h6>Apa sih eduwork itu?</h6>
-                    <p>Platform yang membantu kamu mendapatkan pekerjaan, di bimbing oleh mentor yang akan menjadi teman seperjuanganmu dalam belajar & ber-karir.</p>
+                <div class="col-md-3 px-5">
+                    <div class="iconn">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <h4>Flexible Intensif</h4>
+                    <p>Bisa secara Online atau Offline, diskusikan & sepakati saja semuanya dengan mentormu !</p>
                 </div>
             </div>
         </div>
         <!-- akhir main -->
 
         <!-- awal footer -->
-        <div class="container-fluid bg-info text-center p-5 text-light">
+        <div class="container-fluid footer text-center pt-5 text-light">
             <h4>Ada yang ingin ditanyakan ?</h4>
             <p>Silahkan hubungi 0888-6669-969</p>
+            <footer class="pb-3 pt-4">
+                <p>Tugas Bootstrap Eduwork | Riki Widiantoro | <a href="https://github.com/rikiwidiantoro" target="_blank"><i class="fab fa-github"> rikiwidiantoro</i></a></p>
+            </footer>
         </div>
         <!-- akhir footer -->
 
