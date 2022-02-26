@@ -17,7 +17,7 @@
     // }
 
     // menampilkan data dari database
-    $sql = "SELECt * FROM buku";
+    $sql = "SELECT * FROM buku";
     $result = $koneksi->query($sql);
 
     if( $result->num_rows > 0 ) {
