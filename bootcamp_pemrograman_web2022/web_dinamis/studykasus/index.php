@@ -49,7 +49,7 @@
                 <div class="col-md-12">
                     <table class="table">
                         <thead>
-                            <tr>
+                            <tr class="text-center">
                                 <td>ISBN</td>
                                 <td>Judul</td>
                                 <td>Tahun</td>
@@ -58,6 +58,7 @@
                                 <td>Pengarang</td>
                                 <td>Stok</td>
                                 <td>Harga Pinjam</td>
+                                <td>Aksi</td>
                             </tr>
                         </thead>
                         <tbody>
@@ -73,8 +74,9 @@
                                             <td>".$book['nama_pengarang']."</td>
                                             <td>".$book['qty_stok']."</td>
                                             <td>".$book['harga_pinjam']."</td>
-                                            <td>
+                                            <td class='text-center'>
                                                 <a href='edit.php?isbn=".$book['isbn']."' class='btn btn-warning'>Edit</a>
+                                                <a href='hapus.php?isbn=".$book['isbn']."' class='btn btn-danger' onclick='return confirm('Are you sure?')'>Hapus</a>
                                             </td>
                                         </tr>
                                     ";
