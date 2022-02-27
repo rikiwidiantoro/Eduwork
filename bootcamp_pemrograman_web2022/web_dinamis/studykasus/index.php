@@ -4,6 +4,7 @@
                             LEFT JOIN katalog ON buku.id_katalog = katalog.id_katalog
                             LEFT JOIN penerbit ON buku.id_penerbit = penerbit.id_penerbit
                             LEFT JOIN pengarang ON buku.id_pengarang = pengarang.id_pengarang
+                            ORDER BY judul ASC
     ");
 
 ?>
@@ -42,7 +43,10 @@
 
             <!-- tabel -->
             <div class="row">
-                <div class="col">
+                <div class="col-md-12 mb-2">
+                    <a href="tambah.php" class="btn btn-primary">Tambah Buku</a>
+                </div>
+                <div class="col-md-12">
                     <table class="table">
                         <thead>
                             <tr>
@@ -61,14 +65,17 @@
                                 foreach($books as $book) {
                                     echo "
                                         <tr>
-                                            <td>". $book['isbn']."</td>
-                                            <td>". $book['judul']."</td>
+                                            <td>".$book['isbn']."</td>
+                                            <td>".$book['judul']."</td>
                                             <td>".$book['tahun']."</td>
                                             <td>".$book['nama_katalog']."</td>
                                             <td>".$book['nama_penerbit']."</td>
                                             <td>".$book['nama_pengarang']."</td>
                                             <td>".$book['qty_stok']."</td>
                                             <td>".$book['harga_pinjam']."</td>
+                                            <td>
+                                                <a href='edit.php?isbn=".$book['isbn']."' class='btn btn-warning'>Edit</a>
+                                            </td>
                                         </tr>
                                     ";
                                 }
