@@ -18,7 +18,7 @@
 
         <title>tugas CRUD web dinamis</title>
         <!-- data tables -->
-        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.css">
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css">
         <!-- font awesome -->
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     </head>
@@ -43,8 +43,8 @@
             <!-- tabel -->
             <div class="row">
                 <div class="col-md-10 offset-1">
-                    <table class="display" id="tabel">
-                        <tr>
+                    <table id="tabel" class="display" style="width:100%">
+                        <tr class="text-center">
                             <td>ID</td>
                             <td>Judul</td>
                             <td>Genre</td>
@@ -61,6 +61,7 @@
                                         <td>". $komik['tahun'] ."</td>
                                         <td>
                                             <a href='edit.php?id=".$komik['id_komik']."' class='btn btn-warning'>Edit</a>
+                                            <a href='hapus.php?id=".$komik['id_komik']."' class='btn btn-danger'>Hapus</a>
                                         </td>
                                     </tr>
                                 ";
