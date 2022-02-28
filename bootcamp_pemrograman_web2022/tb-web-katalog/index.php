@@ -1,3 +1,10 @@
+<?php
+    include_once('koneksi.php');
+
+    $gerabahs = mysqli_query($koneksi, "SELECT * FROM gerabah");
+    // $tass = mysqli_query($koneksi, "SELECT * FROM tas_anyam");
+?>
+
 <!doctype html>
 <html lang="en">
     <head>
@@ -9,6 +16,22 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
         <title>katalog nana art</title>
+
+        <!-- font awesome -->
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+        <style>
+            .navbar a {
+                color: white;
+            }
+            .navbar .active {
+                color: #004da9;
+            }
+            .tambah:hover {
+                color: white;
+            }
+        </style>
+
     </head>
     <body>
         <!-- awal navbar -->
@@ -50,39 +73,63 @@
                     <hr width="287px">
                 </div>
                 <div class="col-md-9">
-                    <a href="" class="btn btn-info">Tambah Data</a>
+                    <a href="" class="btn btn-info px-3 tambah">Tambah Data</a>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-4">
-                    <div class="card mb-3" style="max-width: 540px;">
-                        <div class="row g-0">
-                            <div class="col-md-4">
-                                <img src="asset-foto/gerabah/" class="img-fluid rounded-start" alt="...">
-                            </div>
-                            <div class="col-md-8">
-                            <div class="card-body">
-                                <h5 class="card-title">Deskripsi Gerabah</h5>
-                                <ul>
-                                    <li>Nama :</li>
-                                    <li>Bahan :</li>
-                                    <li>Ukuran :</li>
-                                    <li>Berat :</li>
-                                    <li>Harga Grosir :</li>
-                                    <li>Harga Konsumen :</li>
-                                </ul>
-                                <div>
-                                    <a href="" class="btn btn-warning px-4">Edit</a>
-                                    <a href="" class="btn btn-danger px-4">Hapus</a>
+                <?php
+                    foreach($gerabahs as $gerabah) {
+                        echo "
+                            <div class='col-md-4'>
+                                <div class='card mb-3' style='max-width: 540px;'>
+                                    <div class='row g-0'>
+                                        <div class='col-md-4'>
+                                            <img src='asset-foto/gerabah/". $gerabah['gambar'] ."' class='img-fluid rounded-start' alt='...'>
+                                        </div>
+                                        <div class='col-md-8'>
+                                            <div class='card-body'>
+                                                <h5 class='card-title'>Deskripsi Gerabah</h5>
+                                                <ul>
+                                                    <li>Nama : ". $gerabah['nama'] ."</li>
+                                                    <li>Bahan : ". $gerabah['bahan'] ."</li>
+                                                    <li>Ukuran : ". $gerabah['ukuran'] ."</li>
+                                                    <li>Berat : ". $gerabah['berat'] ."</li>
+                                                    <li>Harga Grosir : Rp.". $gerabah['harga_grosir'] ."</li>
+                                                    <li>Harga Konsumen : Rp.". $gerabah['harga_konsumen'] ."</li>
+                                                </ul>
+                                                <div>
+                                                    <a href='' class='btn btn-warning px-4'>Edit</a>
+                                                    <a href='' class='btn btn-danger px-4'>Hapus</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                        ";
+                    }
+                ?>
+                
             </div>
         </div>
         <!-- akhir isi -->
+
+
+        <!-- awal tentang kami -->
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-md-6 offset-3">
+                    <h4>Tentang Kami</h4>
+                    <hr width="200px" style="margin: auto;">
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-6 offset-3">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta ipsa quam totam nostrum nihil vitae dolorum tenetur dolores inventore quos cupiditate possimus eos unde rem, ipsam, accusantium fugiat iusto laborum illo consequuntur earum. Dignissimos deserunt recusandae magni nostrum animi, eos perspiciatis, repellendus soluta, omnis odio voluptates maiores error amet porro.</p>
+                </div>
+            </div>
+        </div>
+        <!-- akhir tentang kami -->
 
 
         <!-- awal footer -->
