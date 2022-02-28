@@ -49,6 +49,7 @@
                             <td>Judul</td>
                             <td>Genre</td>
                             <td>Tahun</td>
+                            <td>Aksi</td>
                         </tr>
                         <?php
                             foreach($komiks as $komik) {
@@ -58,6 +59,9 @@
                                         <td>". $komik['judul'] ."</td>
                                         <td>". $komik['genre'] ."</td>
                                         <td>". $komik['tahun'] ."</td>
+                                        <td>
+                                            <a href='edit.php?id=".$komik['id_komik']."' class='btn btn-warning'>Edit</a>
+                                        </td>
                                     </tr>
                                 ";
                             }
