@@ -19,8 +19,12 @@
 
         <!-- font awesome -->
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
         <style>
+            body {
+                background-color: #f8efed;
+            }
             .navbar a {
                 color: white;
             }
@@ -29,6 +33,32 @@
             }
             .tambah:hover {
                 color: white;
+            }
+            .navbar .container h4 {
+                display: inline;
+                position: absolute;
+                top: 17px;
+            }
+            .card {
+                box-shadow: -2px -1px 10px 2px rgba(0,0,0,0.35);
+            }
+            .card-body {
+                font-size: 13px;
+            }
+            .card-body a {
+                font-size: 14px;
+                padding: 6px 30px;
+                margin: 1px 5px;
+            }
+            .footer .row .col {
+                color: #f8efed;
+            }
+            .footer ul {
+                list-style-type: none;
+                padding: 0;
+            }
+            .footer ul li i {
+                margin-right: 5px;
             }
         </style>
 
@@ -39,9 +69,9 @@
             <div class="container">
                 <div class="col-md-5">
                     <a class="navbar-brand" href="#">
-                    <!-- <img src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt="" width="30" height="24" class="d-inline-block align-text-top"> -->
-                    NANA ART
+                        <img src="asset-foto/nana-art.png" alt="nana_art" width="50" class="d-inline-block align-text-top">
                     </a>
+                    <h4>NANA ART</h4>
                 </div>
                 <div class="col-md-5 pb-2">
                     <ul class="nav justify-content-end">
@@ -83,23 +113,47 @@
                             <div class='col-md-4'>
                                 <div class='card mb-3' style='max-width: 540px;'>
                                     <div class='row g-0'>
-                                        <div class='col-md-4'>
+                                        <div class='col-md-4 mt-5'>
                                             <img src='asset-foto/gerabah/". $gerabah['gambar'] ."' class='img-fluid rounded-start' alt='...'>
                                         </div>
                                         <div class='col-md-8'>
                                             <div class='card-body'>
-                                                <h5 class='card-title'>Deskripsi Gerabah</h5>
-                                                <ul>
-                                                    <li>Nama : ". $gerabah['nama'] ."</li>
-                                                    <li>Bahan : ". $gerabah['bahan'] ."</li>
-                                                    <li>Ukuran : ". $gerabah['ukuran'] ."</li>
-                                                    <li>Berat : ". $gerabah['berat'] ."</li>
-                                                    <li>Harga Grosir : Rp.". $gerabah['harga_grosir'] ."</li>
-                                                    <li>Harga Konsumen : Rp.". $gerabah['harga_konsumen'] ."</li>
-                                                </ul>
-                                                <div>
-                                                    <a href='' class='btn btn-warning px-4'>Edit</a>
-                                                    <a href='' class='btn btn-danger px-4'>Hapus</a>
+                                                <h5 class='card-title'><u>Deskripsi Gerabah</u></h5>
+                                                <table>
+                                                    <tr>
+                                                        <td>Nama</td>
+                                                        <td>:</td>
+                                                        <td>". $gerabah['nama'] ."</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Bahan</td>
+                                                        <td>:</td>
+                                                        <td>". $gerabah['bahan'] ."</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Ukuran</td>
+                                                        <td>:</td>
+                                                        <td>". $gerabah['ukuran'] ."</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Berat</td>
+                                                        <td>:</td>
+                                                        <td>". $gerabah['berat'] ."</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Harga <br> Grosir</td>
+                                                        <td>:</td>
+                                                        <td>Rp.". $gerabah['harga_grosir'] ."</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Harga <br> Konsumen</td>
+                                                        <td>:</td>
+                                                        <td>Rp.". $gerabah['harga_konsumen'] ."</td>
+                                                    </tr>
+                                                </table>
+                                                <div class='mt-2'>
+                                                    <a href='' class='btn btn-warning'>Edit</a>
+                                                    <a href='' class='btn btn-danger'>Hapus</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -133,18 +187,33 @@
 
 
         <!-- awal footer -->
-        <div class="container-fluid bg-info">
-            <div class="row">
-                <div class="col">
-                    <h3>NANA ART</h3>
-                    <h5>Aneka Gerabah Tanah Liat & <br> Tas Anyam</h5>
+        <div class="container-fluid bg-info footer">
+            <div class="container pt-5">
+                <div class="row">
+                    <div class="col offset-1">
+                        <h2>NANA ART</h2>
+                        <h5>Aneka Gerabah Tanah Liat & <br> Tas Anyam</h5>
+                    </div>
+                    <div class="col">
+                        <h5>Alamat</h5>
+                        <p>Sambirobyong RT 01/RW 02, Desa Plancungan,<br> Kecamatan Slahung, Ponorogo,<br> Jawa Timur, Indonesia</p>
+                    </div>
+                    <div class="col">
+                        <h5>Kontak</h5>
+                        <ul>
+                            <li><i class="fas fa-phone"></i> 0852-3281-0942</li>
+                            <li><i class="fa fa-whatsapp"></i> 0852-3281-0942</li>
+                            <li><i class="fa fa-envelope" aria-hidden="true"></i> nanaridawati@gmail.com</li>
+                            <li><i class="fab fa-instagram"></i> @nana_grabah_ponorogo</li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <footer class="text-center">
-                        <p>&copy; 2022 Riki Widiantoro | Tugas Besar Eduwork - Website Katalog | <a href="https://github.com/rikiwidiantoro" target="_blank"><i class="fab fa-github"> rikiwidiantoro</i></a></p>
-                    </footer>
+                <div class="row mt-5">
+                    <div class="col">
+                        <footer class="text-center">
+                            <p>&copy; 2022 Riki Widiantoro | Tugas Besar Eduwork - Website Katalog | <a href="https://github.com/rikiwidiantoro" target="_blank"><i class="fab fa-github"> rikiwidiantoro</i></a></p>
+                        </footer>
+                    </div>
                 </div>
             </div>
         </div>
