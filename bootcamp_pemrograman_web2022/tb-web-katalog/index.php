@@ -152,7 +152,7 @@
                                                     </tr>
                                                 </table>
                                                 <div class='mt-2'>
-                                                    <a href='' class='btn btn-warning'>Edit</a>
+                                                    <a href='editgerabah.php?id=".$gerabah['id_gerabah']."' class='btn btn-warning'>Edit</a>
                                                     <a href='' class='btn btn-danger'>Hapus</a>
                                                 </div>
                                             </div>
