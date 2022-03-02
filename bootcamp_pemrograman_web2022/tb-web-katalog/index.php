@@ -103,7 +103,7 @@
                     <hr width="287px">
                 </div>
                 <div class="col-md-9">
-                    <a href="" class="btn btn-info px-3 tambah">Tambah Data</a>
+                    <a href="tambahgerabah.php" class="btn btn-info px-3 tambah">Tambah Data</a>
                 </div>
             </div>
             <div class="row">
