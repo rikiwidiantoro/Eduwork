@@ -9,7 +9,13 @@
         $berat = $_POST['berat'];
         $harga_grosir = $_POST['harga_grosir'];
         $harga_konsumen = $_POST['harga_konsumen'];
-        $gambar = $_POST['gambar'];
+        // $gambar = $_POST['gambar'];
+
+        // upload gambar
+        $gambar = uploadGambar();
+        if( !$gambar ) {
+            return false;
+        }
 
         // mengirim data ke database
         $tambahgerabah = mysqli_query($koneksi, "INSERT INTO `gerabah`(`id_gerabah`, `gambar`, `nama`, `bahan`, `ukuran`, `berat`, `harga_grosir`, `harga_konsumen`) VALUES('', '$gambar', '$nama', '$bahan', '$ukuran', '$berat', '$harga_grosir', '$harga_konsumen');");
@@ -42,7 +48,7 @@
             </div>
             <div class="row">
                 <div class="col-md-6 offset-3">
-                    <form action="tambahgerabah.php" method="post">
+                    <form action="tambahgerabah.php" method="post" enctype="multipart/form-data">
 
                         <table  class="table-bordered" cellpadding="8" width="100%">
                             <tr>
@@ -84,7 +90,7 @@
                             <tr>
                                 <td>Gambar</td>
                                 <td>
-                                    <input type="text" class="form-control" name="gambar" placeholder="contoh: gambar.jpg">
+                                    <input type="file" class="form-control" name="gambar">
                                 </td>
                             </tr>
                             <tr>

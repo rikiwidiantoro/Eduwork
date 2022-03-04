@@ -27,9 +27,9 @@
         // cek yg diupload apakah gambar atau bukan
         $ekstensiGambarValid = ['jpg', 'jpeg', 'png'];
         $ekstensiGambar = explode('.', $namaFile);
-        $ekstensiGambar = strtolower(end($ekstensiGambar));
+        $ekstensiGambarr = strtolower(end($ekstensiGambar));
 
-        if( !in_array($ekstensiGambar, $ekstensiGambarValid) ) {
+        if( !in_array($ekstensiGambarr, $ekstensiGambarValid) ) {
             echo "
                 <script>
                     alert('yang Anda upload bukan gambar!');
@@ -49,7 +49,7 @@
         // lolos pengecekan, gambar siap diupload & generate nama gambar baru
         $namaFileBaru = uniqid();
         $namaFileBaru .= '.';
-        $namaFileBaru .= $ekstensiGambar;
+        $namaFileBaru .= $ekstensiGambarr;
 
         move_uploaded_file($tmpName, 'asset-foto/gerabah/' . $namaFileBaru);
         return $namaFileBaru;
