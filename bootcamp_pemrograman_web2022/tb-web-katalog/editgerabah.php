@@ -25,7 +25,15 @@
         $berat = $_POST['berat'];
         $harga_grosir = $_POST['harga_grosir'];
         $harga_konsumen = $_POST['harga_konsumen'];
-        $gambar = $_POST['gambar'];
+        // $gambar = $_POST['gambar'];
+
+        $gambarLama = ($_POST['gambarLama']);
+        // cek apakah mengupload gambar baru apa tidak
+        if( $_FILES['gambar']['error'] === 4 ) {
+            $gambar = $gambarLama;
+        } else {
+            $gambar = uploadGambar();
+        }
 
         // mengirim data ke database
         $editgerabah = mysqli_query($koneksi, "UPDATE gerabah SET gambar = '$gambar', nama = '$nama', bahan = '$bahan', ukuran = '$ukuran', berat = '$berat', harga_grosir = '$harga_grosir', harga_konsumen = '$harga_konsumen' WHERE id_gerabah = '$id';");
@@ -59,9 +67,9 @@
             </div>
             <div class="row">
                 <div class="col-md-6 offset-3">
-                    <form action="editgerabah.php" method="post">
-
-                        <table  class="table-bordered" cellpadding="8" width="100%">
+                    <form action="editgerabah.php" method="post" enctype="multipart/form-data">
+                        <input type="hidden" name="gambarLama" value="<?php echo $gambar; ?>">
+                        <table class="table-bordered" cellpadding="8" width="100%">
                             <tr>
                                 <td>ID</td>
                                 <td>
@@ -107,7 +115,8 @@
                             <tr>
                                 <td>Gambar</td>
                                 <td>
-                                    <input type="text" class="form-control" name="gambar" placeholder="contoh: gambar.jpg" value="<?= $gambar ?>">
+                                    <img src="asset-foto/gerabah/<?= $gambar ?>" width="100">
+                                    <input type="file" class="form-control" name="gambar" value="<?= $gambar ?>">
                                 </td>
                             </tr>
                             <tr>
