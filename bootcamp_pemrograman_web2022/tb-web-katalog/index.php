@@ -60,6 +60,9 @@
             .footer ul li i {
                 margin-right: 5px;
             }
+            .uwu span {
+                font-size: 12px;
+            }
         </style>
 
     </head>
@@ -76,16 +79,16 @@
                 <div class="col-md-5 pb-2">
                     <ul class="nav justify-content-end">
                         <li class="nav-item px-3">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" aria-current="page" href="#gerabah">Home</a>
                         </li>
                         <li class="nav-item px-3">
-                            <a class="nav-link" href="#">Gerabah</a>
+                            <a class="nav-link" href="#gerabah">Gerabah</a>
                         </li>
                         <li class="nav-item px-3">
-                            <a class="nav-link" href="#">Tas Anyam</a>
+                            <a class="nav-link" href="#tas">Tas Anyam</a>
                         </li>
                         <li class="nav-item px-3">
-                            <a class="nav-link" href="#">Tentang Kami</a>
+                            <a class="nav-link" href="#tentang">Tentang Kami</a>
                         </li>
                     </ul>
                 </div>
@@ -95,7 +98,7 @@
 
 
         <!-- awal isi -->
-        <br><br>
+        <br id="gerabah"><br>
         <div class="container my-5">
             <!-- awal isi gerabah -->
             <div class="row">
@@ -168,13 +171,15 @@
             </div>
             <!-- akhir isi gerabah -->
             <!-- awal isi tas anyam -->
+            <br id="tas">
             <hr>
-            <div class="row">
-                <div class="col-md-2 mt-4">
+            <br>
+            <div class="row mt-2">
+                <div class="col-md-2">
                     <h4>Aneka Tas Anyam</h4>
                     <hr width="200px">
                 </div>
-                <div class="col-md-10 mt-4">
+                <div class="col-md-10">
                     <a href="tambahtas.php" class="btn btn-info px-3 tambah">Tambah Data</a>
                 </div>
             </div>
@@ -248,19 +253,21 @@
 
 
         <!-- awal tentang kami -->
-        <div class="container text-center">
+        <div class="container text-center" id="tentang">
             <div class="row">
                 <div class="col-md-6 offset-3">
                     <h4>Tentang Kami</h4>
                     <hr width="200px" style="margin: auto;">
                 </div>
             </div>
-            <div class="row mt-3">
+            <div class="row mt-3 uwu">
                 <div class="col-md-6 offset-3">
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta ipsa quam totam nostrum nihil vitae dolorum tenetur dolores inventore quos cupiditate possimus eos unde rem, ipsam, accusantium fugiat iusto laborum illo consequuntur earum. Dignissimos deserunt recusandae magni nostrum animi, eos perspiciatis, repellendus soluta, omnis odio voluptates maiores error amet porro.</p>
+                    <p>Nana Art merupakan salah satu UMKM Aneka Gerabah Tanah Liat dan Tas Anyam dari desa Plancungan kecamatan Slahung kabupaten Ponorogo Jawa Timur</p>
+                    <span>*Data ini saya (Developer) peroleh waktu KKN dulu di divisi bidang Ekonomi Produktif</span>
                 </div>
             </div>
         </div>
+        <br>
         <!-- akhir tentang kami -->
 
 
