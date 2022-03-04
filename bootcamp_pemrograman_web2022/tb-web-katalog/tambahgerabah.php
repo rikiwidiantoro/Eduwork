@@ -12,7 +12,7 @@
         // $gambar = $_POST['gambar'];
 
         // upload gambar
-        $gambar = uploadGambar();
+        $gambar = uploadGambarGerabah();
         if( !$gambar ) {
             return false;
         }

@@ -2,7 +2,7 @@
     include_once('koneksi.php');
 
     $gerabahs = mysqli_query($koneksi, "SELECT * FROM gerabah");
-    // $tass = mysqli_query($koneksi, "SELECT * FROM tas_anyam");
+    $tass = mysqli_query($koneksi, "SELECT * FROM tas_anyam");
 ?>
 
 <!doctype html>
@@ -71,7 +71,7 @@
                     <a class="navbar-brand" href="#">
                         <img src="asset-foto/nana-art.png" alt="nana_art" width="50" class="d-inline-block align-text-top">
                     </a>
-                    <h4>NANA ART</h4>
+                    <h4>NANA ART | <span class="text-white">Katalog</span></h4>
                 </div>
                 <div class="col-md-5 pb-2">
                     <ul class="nav justify-content-end">
@@ -97,6 +97,7 @@
         <!-- awal isi -->
         <br><br>
         <div class="container my-5">
+            <!-- awal isi gerabah -->
             <div class="row">
                 <div class="col-md-3">
                     <h4>Aneka Gerabah Tanah Liat</h4>
@@ -114,7 +115,7 @@
                                 <div class='card mb-3' style='max-width: 540px;'>
                                     <div class='row g-0'>
                                         <div class='col-md-4 mt-5'>
-                                            <img src='asset-foto/gerabah/". $gerabah['gambar'] ."' class='img-fluid rounded-start' alt='...'>
+                                            <img src='asset-foto/gerabah/". $gerabah['gambar'] ."' class='img-fluid rounded-start' alt=''>
                                         </div>
                                         <div class='col-md-8'>
                                             <div class='card-body'>
@@ -165,6 +166,83 @@
                 ?>
                 
             </div>
+            <!-- akhir isi gerabah -->
+            <!-- awal isi tas anyam -->
+            <hr>
+            <div class="row">
+                <div class="col-md-2 mt-4">
+                    <h4>Aneka Tas Anyam</h4>
+                    <hr width="200px">
+                </div>
+                <div class="col-md-10 mt-4">
+                    <a href="tambahtas.php" class="btn btn-info px-3 tambah">Tambah Data</a>
+                </div>
+            </div>
+            <div class="row">
+                <?php
+                    foreach($tass as $tas) {
+                        echo "
+                            <div class='col-md-4'>
+                                <div class='card mb-3' style='max-width: 540px;'>
+                                    <div class='row g-0'>
+                                        <div class='col-md-4 mt-5'>
+                                            <img src='asset-foto/tas/". $tas['gambar'] ."' class='img-fluid rounded-start' alt=''>
+                                        </div>
+                                        <div class='col-md-8'>
+                                            <div class='card-body'>
+                                                <h5 class='card-title'><u>Deskripsi Tas Anyam</u></h5>
+                                                <table>
+                                                    <tr>
+                                                        <td>Nama</td>
+                                                        <td>:</td>
+                                                        <td>". $tas['nama'] ."</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Bahan</td>
+                                                        <td>:</td>
+                                                        <td>". $tas['bahan'] ."</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Warna</td>
+                                                        <td>:</td>
+                                                        <td>". $tas['warna'] ."</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Ukuran</td>
+                                                        <td>:</td>
+                                                        <td>". $tas['ukuran'] ."</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Berat</td>
+                                                        <td>:</td>
+                                                        <td>". $tas['berat'] ."</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Harga <br> Reseller</td>
+                                                        <td>:</td>
+                                                        <td>Rp.". $tas['harga_reseller'] ."</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Harga <br> Konsumen</td>
+                                                        <td>:</td>
+                                                        <td>Rp.". $tas['harga_konsumen'] ."</td>
+                                                    </tr>
+                                                </table>
+                                                <div class='mt-2'>
+                                                    <a href='edittas.php?id=".$tas['id_tas']."' class='btn btn-warning'>Edit</a>
+                                                    <a href='hapustas.php?id=".$tas['id_tas']."' class='btn btn-danger'>Hapus</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        ";
+                    }
+                ?>
+                
+            </div>
+            <!-- akhir isi tas anyam -->
         </div>
         <!-- akhir isi -->
 

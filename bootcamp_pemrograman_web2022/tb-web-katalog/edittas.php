@@ -3,17 +3,18 @@
 
     // query data
     $id = $_GET['id'];
-    $tampil = mysqli_query($koneksi, "SELECT * FROM gerabah WHERE id_gerabah = '$id';");
+    $tampil = mysqli_query($koneksi, "SELECT * FROM tas_anyam WHERE id_tas = '$id';");
 
     // looping query data
-    while( $data_gerabah = mysqli_fetch_array($tampil) ) {
-        $nama = $data_gerabah['nama'];
-        $gambar = $data_gerabah['gambar'];
-        $bahan = $data_gerabah['bahan'];
-        $ukuran = $data_gerabah['ukuran'];
-        $berat = $data_gerabah['berat'];
-        $harga_grosir = $data_gerabah['harga_grosir'];
-        $harga_konsumen = $data_gerabah['harga_konsumen'];
+    while( $data_tas = mysqli_fetch_array($tampil) ) {
+        $nama = $data_tas['nama'];
+        $gambar = $data_tas['gambar'];
+        $bahan = $data_tas['bahan'];
+        $warna = $data_tas['warna'];
+        $ukuran = $data_tas['ukuran'];
+        $berat = $data_tas['berat'];
+        $harga_reseller = $data_tas['harga_reseller'];
+        $harga_konsumen = $data_tas['harga_konsumen'];
     }
 
     // mengambil data form yg baru di edit
@@ -21,9 +22,10 @@
         $id = $_POST['id'];
         $nama = $_POST['nama'];
         $bahan = $_POST['bahan'];
+        $warna = $_POST['warna'];
         $ukuran = $_POST['ukuran'];
         $berat = $_POST['berat'];
-        $harga_grosir = $_POST['harga_grosir'];
+        $harga_reseller = $_POST['harga_reseller'];
         $harga_konsumen = $_POST['harga_konsumen'];
         // $gambar = $_POST['gambar'];
 
@@ -32,15 +34,15 @@
         if( $_FILES['gambar']['error'] === 4 ) {
             $gambar = $gambarLama;
         } else {
-            $gambar = uploadGambarGerabah();
+            $gambar = uploadGambarTas();
         }
 
         // mengirim data ke database
-        $editgerabah = mysqli_query($koneksi, "UPDATE gerabah SET gambar = '$gambar', nama = '$nama', bahan = '$bahan', ukuran = '$ukuran', berat = '$berat', harga_grosir = '$harga_grosir', harga_konsumen = '$harga_konsumen' WHERE id_gerabah = '$id';");
+        $edittas = mysqli_query($koneksi, "UPDATE tas_anyam SET gambar = '$gambar', nama = '$nama', bahan = '$bahan', warna = '$warna', ukuran = '$ukuran', berat = '$berat', harga_reseller = '$harga_reseller', harga_konsumen = '$harga_konsumen' WHERE id_tas = '$id';");
 
         // alert dan re direct
         // walaupun ada bug tampilan setelah alert di klik ok
-        echo "<script>alert('Data Gerabah berhasil diubah!'); document.location.href = 'index.php';</script>";
+        echo "<script>alert('Data Tas Anyam berhasil diubah!'); document.location.href = 'index.php';</script>";
         // header('Location: index.php');
     }
 ?>
@@ -61,13 +63,13 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col">
-                    <h1>Edit Data Gerabah</h1>
+                    <h1>Edit Data Tas Anyam</h1>
                     <hr width="500" style="margin:20px auto; height:1.5px;">
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-6 offset-3">
-                    <form action="editgerabah.php" method="post" enctype="multipart/form-data">
+                    <form action="edittas.php" method="post" enctype="multipart/form-data">
                         <input type="hidden" name="gambarLama" value="<?php echo $gambar; ?>">
                         <table class="table-bordered" cellpadding="8" width="100%">
                             <tr>
@@ -89,6 +91,12 @@
                                 </td>
                             </tr>
                             <tr>
+                                <td>Warna</td>
+                                <td>
+                                    <input type="text" class="form-control" name="warna" value="<?= $warna ?>">
+                                </td>
+                            </tr>
+                            <tr>
                                 <td>Ukuran</td>
                                 <td>
                                     <input type="text" class="form-control" name="ukuran" value="<?= $ukuran ?>">
@@ -101,9 +109,9 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td>Harga Grosir</td>
+                                <td>Harga Reseller</td>
                                 <td>
-                                    <input type="number" class="form-control" name="harga_grosir" value="<?= $harga_grosir ?>">
+                                    <input type="number" class="form-control" name="harga_reseller" value="<?= $harga_reseller ?>">
                                 </td>
                             </tr>
                             <tr>
@@ -115,13 +123,13 @@
                             <tr>
                                 <td>Gambar</td>
                                 <td>
-                                    <img src="asset-foto/gerabah/<?= $gambar ?>" width="100">
+                                    <img src="asset-foto/tas/<?= $gambar ?>" width="100">
                                     <input type="file" class="form-control" name="gambar" value="<?= $gambar ?>">
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="2">
-                                <input type="submit" name="submit" class="form-control btn btn-info" value="Edit Data Gerabah">
+                                <input type="submit" name="submit" class="form-control btn btn-info" value="Edit Data Tas Anyam">
                                 </td>
                             </tr>
                         </table>
