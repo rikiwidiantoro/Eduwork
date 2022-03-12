@@ -1,0 +1,23 @@
+qa engineer
+
+software testing
+1. tugas manual testing swag labs
+2. tugas testcase dengan qase.io, doc, swag labs
+
+agile
+1. metodologi agile 	v
+2. agile testing 	v
+3. scrum testing 	v
+4. clickup kolaborasi 	v
+5. clickup testcase materi 8
+
+practice
+1. git fundamental
+2. js syntax 		v
+3. js variable		v
+4. js data types	v
+5. js function		v
+6. install setup cypress
+7. test script
+
+https://bit.ly/FEDweek1sesi2
